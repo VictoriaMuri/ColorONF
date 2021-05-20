@@ -1,0 +1,33 @@
+.demo {
+  background-color: var(--palette-background-secondary);
+
+  &__container {
+    --padding: #{responsive(60, 120)};
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: responsive(60, 120);
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+  }
+
+  &__img {
+    --size: #{responsive(240, 350)};
+
+    width: var(--size);
+    height: var(--size);
+    margin-bottom: responsive(14, 20);
+    border: 5px solid var(--palette-font-inverse);
+  }
+
+  &__desc {
+    padding: 1em;
+    color: var(--palette-font-inverse);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--palette-background-inverse);
+    border: 5px solid var(--palette-font-inverse);
+  }
+}

@@ -1,0 +1,53 @@
+.burger {
+  --size: 30px;
+
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  row-gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+
+  @media (hover) {
+    transition: transform var(--anim-main);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &::before,
+  &::after {
+    transition: transform var(--anim-main);
+    content: '';
+  }
+
+  &::before,
+  &::after,
+  &__line {
+    width: 80%;
+    height: 2px;
+    background-color: var(--palette-font);
+  }
+
+  &__line {
+    opacity: 1;
+    transition: opacity var(--anim-main);
+  }
+
+  &.open {
+    &::before {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(3px, -3px);
+    }
+  }
+
+  &.open &__line {
+    opacity: 0;
+  }
+}

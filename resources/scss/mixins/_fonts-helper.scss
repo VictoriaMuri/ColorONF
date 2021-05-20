@@ -1,0 +1,11 @@
+@mixin font-face($family, $path, $display: fallback, $weight: 400, $style: normal) {
+  @font-face {
+    font-weight: $weight;
+    font-family: $family;
+    font-style: $style;
+    src: local($family), url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff'),
+      url('#{$path}.svg') format('svg'), url('#{$path}.ttf') format('truetype'),
+      url('#{$path}.eot?') format('embedded-opentype');
+    font-display: $display;
+  }
+}

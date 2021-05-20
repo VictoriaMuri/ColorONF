@@ -1,0 +1,104 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--palette-background-secondary);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: responsive(60, 80);
+  }
+
+  &__logo {
+    font-size: responsive(28, 36);
+    font-family: var(--font-family-title);
+    transition: transform var(--anim-main);
+
+    @media (hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__menu {
+    transition: transform var(--anim-main), opacity var(--anim-main), width var(--anim-main);
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    @media #{$media-sm} {
+      position: fixed;
+      top: responsive(60, 80);
+      right: 0;
+      flex-flow: column;
+      width: 100%;
+      height: calc(100vh - #{responsive(60, 80)});
+      padding: rem(30);
+      overflow-y: auto;
+      background-color: var(--palette-background);
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    top: responsive(60, 80);
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    gap: rem(30);
+    align-items: center;
+    width: min(400px, 100%);
+    height: calc(100vh - #{responsive(60, 80)});
+    padding: rem(30);
+    overflow-y: auto;
+    background-color: var(--palette-background);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform var(--anim-main), opacity var(--anim-main), width var(--anim-main);
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+
+      @media #{$media-sm} {
+        width: 100%;
+      }
+    }
+  }
+
+  &__controller {
+    display: flex;
+    gap: rem(30);
+    align-items: center;
+  }
+
+  &__profile {
+    --size: #{rem(24)};
+
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    transition: transform var(--anim-main);
+
+    @media (hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media #{$media-sm} {
+      display: flex;
+    }
+  }
+}

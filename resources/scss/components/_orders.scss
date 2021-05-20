@@ -1,0 +1,10 @@
+.orders {
+  &__title {
+    margin-bottom: responsive(20, 32);
+  }
+
+  &__scroll-block {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

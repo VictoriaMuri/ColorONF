@@ -1,0 +1,12 @@
+.btn {
+  padding: 0.8em 1.6em;
+  text-align: center;
+  background-color: var(--palette-secondary);
+  transition: box-shadow var(--anim-main);
+
+  @media (hover) {
+    &:hover {
+      box-shadow: var(--shadow-main);
+    }
+  }
+}

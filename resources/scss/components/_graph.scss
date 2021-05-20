@@ -1,0 +1,31 @@
+.graph {
+  &__container {
+    --size: #{responsive(60, 80)};
+
+    display: grid;
+    grid-template: auto 1fr / 1fr 1fr;
+    gap: responsive(60, 80);
+    align-items: center;
+    justify-items: center;
+    min-height: calc(100vh - #{responsive(60, 80)} - 80px);
+    padding-top: var(--size);
+    padding-bottom: var(--size);
+
+    @media #{$media-md} {
+      grid-template: auto / 1fr;
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__scroll-block {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

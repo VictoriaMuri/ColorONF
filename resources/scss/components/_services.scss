@@ -1,0 +1,24 @@
+.services {
+  &__container {
+    --size: #{responsive(60, 80)};
+
+    display: grid;
+    gap: var(--size);
+    padding-top: var(--size);
+    padding-bottom: var(--size);
+    // grid-template-columns: 1fr 1fr;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__scroll-block {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

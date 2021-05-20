@@ -1,0 +1,56 @@
+$xxs: 320;
+$xs: 576;
+$sm: 768;
+$md: 992;
+$ml: 1200;
+$lg: 1400;
+$xl: 1600;
+$xxl: 1920;
+$media-xxs: '(max-width: #{$xxs + px})';
+$media-xs: '(max-width: #{$xs + px})';
+$media-sm: '(max-width: #{$sm + px})';
+$media-md: '(max-width: #{$md + px})';
+$media-ml: '(max-width: #{$ml + px})';
+$media-lg: '(max-width: #{$lg + px})';
+$media-xl: '(max-width: #{$xl + px})';
+$media-xxl: '(max-width: #{$xxl + px})';
+$font-size: 16px;
+:root {
+    --opacity-main: 0.6;
+    --color-white: #fff;
+    --color-white-rgb: 255, 255, 255;
+    --color-black: #000;
+    --color-black-rgb: 0, 0, 0;
+    --color-gray: #e2e2e2;
+    --palette-primary: #dfcccc;
+    --palette-secondary: #c6b1b1;
+    --palette-decor: #c7b8b8;
+    --palette-background: var(--color-white);
+    --palette-background-inverse: var(--color-black);
+    --palette-background-rgb: var(--color-white-rgb);
+    --palette-background-secondary: var(--color-gray);
+    --palette-border: var(--color-black-rgb);
+    --palette-font: var(--color-black);
+    --palette-font-inverse: var(--color-white);
+    --palette-font-rgb: var(--color-black-rgb);
+    --palette-font-opacity: rgba(var(--palette-font-rgb), var(--opacity-main));
+    --anim-duration: 0.2s;
+    --anim-bezier: cubic-bezier(1, 0.17, 0.16, 0.83);
+    --anim-main: var(--anim-duration) linear;
+    --anim-btn: var(--anim-duration) var(--anim-bezier);
+    --border-main: 1px solid rgba(var(--palette-border), var(--opacity-border));
+    --shadow-size: 30px;
+    --shadow-opacity: 0.3;
+    --shadow-opacity-secondary: 0.5;
+    --shadow-main: 0 0 10px rgba(var(--palette-font-rgb), var(--shadow-opacity));
+    --font-family-title: 'Alex Brush', cursive;
+    @media (prefers-color-scheme: dark) {
+        --palette-background: var(--color-black);
+        --palette-background-inverse: var(--color-white);
+        --palette-background-rgb: var(--color-black-rgb);
+        --palette-font: var(--color-white);
+        --palette-font-inverse: var(--color-black);
+        --palette-font-rgb: var(--color-white-rgb);
+        --palette-border: var(--color-white-rgb);
+    }
+}

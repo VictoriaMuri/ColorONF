@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  border: 1px solid var(--palette-font);
+}
+
+.table__item {
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--palette-font);
+}
+
+.table__heading {
+  color: var(--palette-font);
+  background-color: var(--color-gray);
+}
+
+.table__img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}

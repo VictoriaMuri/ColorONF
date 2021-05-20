@@ -1,0 +1,9 @@
+.login {
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: responsive(20, 32);
+  }
+}

@@ -1,0 +1,44 @@
+.price {
+  &__container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: responsive(40, 60) auto;
+  }
+
+  &__item {
+    margin-bottom: responsive(40, 60);
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: responsive(20, 30);
+  }
+
+  &__desc {
+    margin-bottom: responsive(20, 30);
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 2px dotted var(--palette-font);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name,
+  &__num {
+    position: relative;
+    bottom: -2px;
+    background-color: var(--palette-background);
+  }
+}

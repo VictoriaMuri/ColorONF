@@ -1,0 +1,13 @@
+$maxScreenWidth: $ml;
+$minScreenWidth: $xs;
+
+@function responsive($minSize, $maxSize) {
+  $diffSizes: $maxSize - $minSize;
+  $diffScreens: $maxScreenWidth - $minScreenWidth;
+
+  @return clamp(
+    #{$minSize + px},
+    #{$minSize + px} + #{$diffSizes} * (100vw - #{$minScreenWidth + px}) / #{$diffScreens},
+    #{$maxSize + px}
+  );
+}
